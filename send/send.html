@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+        <div class="af">
+            <div class="container">
+                <form class="left"  method="post">
+                  <div class="head">
+                    <h1>Contact Us</h1>
+        
+                    <p>
+                      fell free to contact us any time. we will get back to you as
+                      soon as we can.
+                    </p>
+                  </div>
+                  <input type="text" id="name" placeholder="Name" class="in name" />
+                  <input type="text" id="gmail" placeholder="Email" class="in gmail"/>
+                  <textarea id="msg" cols="30"  rows="2" placeholder="Massage" class="in msg"></textarea>
+                  <input onclick="sendMail()" type="submit">
+                </form>
+                <div class="right">
+                  <h1>info</h1>
+                  <h5><i class="fas fa-envelope">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...@gmail.com</i></h5>
+                  <h5><i class="fas fa-phone-square">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+98........</i></h5>
+                  <h5><i class="fas fa-clock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09:00-18:00</i></h5>
+                </div>
+              </div>
+        </div>
+    </div>
+  </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('user_2TdpbcRhevhQDIGBQaPfM')
+</script>
+<script>
+
+function sendMail(params){
+    form_name=document.getElementById("name").value,
+    to_name=document.getElementById("gmail").value,
+    massage = document.getElementById("msg").value,
+emailjs.send("service_myrt9pa","template_40vb0hb",temparams,{
+to_name: form_name,
+from_name: to_name,
+message: massage,
+});
+}
+
+
+</script>
+  </html>

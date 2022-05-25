@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header::before{
+    content: " ";
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    background: #d11c2a;
+    position: absolute;
+    left:40px;
+    top: 50px;
+}
+
+
+.af{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.af::before{
+    content: " ";
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    background: #d11c2a;
+    position: absolute;
+    right:30px;
+    bottom: 30px;
+}
+.container{
+    width: 90%;
+    height: 80%;
+    background: #1e1e1e;
+    box-shadow: 0 20px 20px 1px rgba(0, 0, 0, 0.445);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;   position: relative;
+}
+.left{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:15% ;
+    justify-content: space-around;
+}
+.head h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.right{
+    width: 30%;
+    height: 70%;
+    background-image: url("./pexels-neo-2653362.jpg");
+    background-size:cover ;
+   position: absolute;
+right: -30px;
+box-shadow: 0 2px 20px black;
+display: flex;
+flex-wrap: nowrap;
+align-content: center;
+flex-direction: column;
+justify-content: space-evenly;
+padding: 40px;
+font-size: 20px;
+}
+
+.in:active{
+    outline: none;
+
+}
+.in{
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #fff;
+}
+
+input[type=submit]{
+    background: linear-gradient(#d11c2a, #a1111b);
+    border: none;
+    
+    padding: 20px;
+    color: #ffff;
+}
+@media screen and (max-width:780px){
+    .right{
+        display: none;
+    }
+    .left{
+        width: 100%;
+        margin: 0;
+        margin: 10px;
+    }
+}
